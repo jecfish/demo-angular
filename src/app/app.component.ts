@@ -19,6 +19,12 @@ export class AppComponent {
   counter = 0;
 
   async increment() {
+    
+    // uncaught exceptions
+    const y = 'something' as any;
+    y.notExist = x;
+    console.log('something', y);
+    
     await Promise.resolve().then(() => timeout(100));
 
     let x;
