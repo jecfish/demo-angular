@@ -22,7 +22,7 @@ export class AppComponent {
     
     // uncaught exceptions
     const y = 'something' as any;
-    y.notExist = x;
+    y.notExist = 'random';
     console.log('something', y);
     
     await Promise.resolve().then(() => timeout(100));
